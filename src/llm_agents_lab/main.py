@@ -1,10 +1,13 @@
-from importlib.metadata import version
+import anthropic
+from dotenv import load_dotenv
 
 
 def main():
-    print(version("langchain"))
-    print(version("langchain-core"))
-    print(version("langgraph"))
+    load_dotenv()
+    client = anthropic.Anthropic()
+    models = client.models.list()
+    for model in models.data:
+        print(model.id)
 
 
 if __name__ == "__main__":
