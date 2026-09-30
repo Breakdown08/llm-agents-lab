@@ -6,7 +6,7 @@
 
 from langchain.agents import create_agent
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 QUESTION = "Что такое очередь задач?"
 

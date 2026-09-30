@@ -16,7 +16,7 @@ from langchain.agents.middleware import (
     wrap_model_call,
 )
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 BASE = "Вы отвечаете на вопросы по разработке. Отвечайте по-русски, до трёх предложений."
 
