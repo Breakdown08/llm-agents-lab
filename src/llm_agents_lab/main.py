@@ -1,14 +1,19 @@
-from langchain.chains import LLMChain
-from langchain_core.prompts import PromptTemplate
+from llm_agents_lab.course_model import build_model
+from langchain.messages import AIMessage, UsageMetadata
+
+
+def build_prompt_translation(language: str, text: str) -> str:
+    return f"Переведи на {language}: {text}"
 
 
 def main():
-    prompt = PromptTemplate.from_template(
-        "Переведи на {language}: {text}"
-    )
-    chain = LLMChain(llm=llm, prompt=prompt)
+    prompt: str = build_prompt_translation("французский", "я люблю программировать")
 
-    print(chain.run(language="французский", text="я люблю программировать"))
+    response: AIMessage = build_model().invoke(prompt)
+    usage_metadata: UsageMetadata | None = response.usage_metadata
+
+    print(response.text)
+    print(usage_metadata)
 
 
 if __name__ == "__main__":
