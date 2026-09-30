@@ -5,7 +5,7 @@
 
 from langchain.messages import AIMessage, HumanMessage, SystemMessage
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 model = build_model(temperature=0)
 

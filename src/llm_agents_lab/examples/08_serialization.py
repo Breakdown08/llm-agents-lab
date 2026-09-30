@@ -20,7 +20,7 @@ from pathlib import Path
 from langchain.messages import HumanMessage, SystemMessage
 from langchain_core.load import dumpd, load
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 HISTORY_FILE = Path(__file__).with_name("dialogue.json")
 

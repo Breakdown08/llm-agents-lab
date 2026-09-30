@@ -7,7 +7,7 @@ output_token_details["reasoning"] в usage_metadata. Любого из них в
 Запуск: python 05_reasoning.py
 """
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 QUESTION = (
     "У Ани в два раза больше книг, чем у Бори, а вместе у них 51 книга. "

@@ -3,7 +3,7 @@
 Запуск: python 02_content_and_text.py
 """
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 model = build_model(temperature=0)
 

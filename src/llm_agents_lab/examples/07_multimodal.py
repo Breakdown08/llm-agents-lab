@@ -13,7 +13,7 @@
 
 from langchain.messages import HumanMessage
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 # Квадрат 8x8 в формате PNG, закодированный base64: все 64 точки цвета
 # RGB (220, 50, 47), красный.

@@ -9,7 +9,7 @@
 
 from langchain.tools import tool
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 
 @tool
