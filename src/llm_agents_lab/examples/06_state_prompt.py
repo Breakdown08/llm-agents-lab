@@ -15,7 +15,7 @@ from langchain.agents.middleware import (
 )
 from langchain.messages import AIMessage, HumanMessage
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 BASE = "Вы помощник службы поддержки. Отвечайте по-русски."
 
