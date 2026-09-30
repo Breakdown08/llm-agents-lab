@@ -1,10 +1,14 @@
-from langchain.chat_models import BaseChatModel
-from llm_agents_lab.course_model import build_model
+from langchain.chains import LLMChain
+from langchain_core.prompts import PromptTemplate
 
 
 def main():
-    model: BaseChatModel = build_model()
-    print("model is ready for work...")
+    prompt = PromptTemplate.from_template(
+        "Переведи на {language}: {text}"
+    )
+    chain = LLMChain(llm=llm, prompt=prompt)
+
+    print(chain.run(language="французский", text="я люблю программировать"))
 
 
 if __name__ == "__main__":
