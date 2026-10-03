@@ -9,7 +9,7 @@ import os
 
 from langchain.chat_models import init_chat_model
 
-from course_model import gateway_kwargs
+from llm_agents_lab.course_model import gateway_kwargs
 
 FAST_MODEL = os.environ["MODEL_NAME"]
 STRONG_MODEL = os.getenv("MODEL_NAME_STRONG") or FAST_MODEL

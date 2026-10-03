@@ -1,7 +1,7 @@
 """Пример 1 урока 4: три места, где задаётся параметр модели.
 """
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 QUESTION = "Опишите очередь задач в трёх предложениях."
 

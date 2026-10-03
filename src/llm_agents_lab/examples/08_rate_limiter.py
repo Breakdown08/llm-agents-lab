@@ -5,7 +5,7 @@ import time
 
 from langchain.rate_limiters import InMemoryRateLimiter
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 rate_limiter = InMemoryRateLimiter(
     requests_per_second=0.5,  # один запрос раз в две секунды

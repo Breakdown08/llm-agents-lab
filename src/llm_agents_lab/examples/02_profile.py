@@ -1,9 +1,9 @@
 """Пример 2 урока 4: профиль модели, чтение и правка.
 """
 
-from langchain_openai import ChatOpenAI
+from langchain_anthropic import ChatAnthropic
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 FIELDS = (
     "max_input_tokens",
@@ -53,7 +53,7 @@ show_profile("ПРОФИЛЬ МОДЕЛИ КУРСА", build_model().profile)
 
 # Ключ здесь не используется: профиль читается из данных пакета, запрос
 # к провайдеру не уходит.
-known = ChatOpenAI(model="gpt-5.5", api_key="not-used-no-request-is-made")
+known = ChatAnthropic(model="gpt-5.5", api_key="not-used-no-request-is-made")
 show_profile("ПРОФИЛЬ gpt-5.5 ИЗ ДАННЫХ ПАКЕТА", known.profile)
 
 custom = build_model(profile=COURSE_PROFILE)

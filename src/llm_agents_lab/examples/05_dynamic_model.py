@@ -10,7 +10,7 @@ from typing import Callable
 from langchain.agents import create_agent
 from langchain.agents.middleware import ModelRequest, ModelResponse, wrap_model_call
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 fast = build_model(os.environ["MODEL_NAME"], temperature=0, max_tokens=256)
 strong = build_model(

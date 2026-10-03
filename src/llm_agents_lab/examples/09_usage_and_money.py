@@ -8,7 +8,7 @@ from langchain_core.callbacks import (
     get_usage_metadata_callback,
 )
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 # ПОДСТАВЬТЕ СВОИ СТАВКИ: доллары за миллион токенов, строка на модель.
 # Имя модели пишется так, как оно приходит в ответе провайдера.

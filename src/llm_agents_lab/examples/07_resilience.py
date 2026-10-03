@@ -15,7 +15,7 @@ from langchain_core.exceptions import (
     ModelTimeoutError,
 )
 
-from course_model import build_model
+from llm_agents_lab.course_model import build_model
 
 EXCEPTIONS = (
     ModelAuthenticationError,
