@@ -2,6 +2,11 @@ from langchain.chat_models import BaseChatModel
 from llm_agents_lab.course_model import build_model
 
 
+def get_model_report(model: BaseChatModel):
+    pass
+
+
+
 def main():
     model: BaseChatModel = build_model()
     print("model is ready for work...")
