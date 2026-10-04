@@ -13,9 +13,9 @@ def gateway_kwargs() -> dict:
 
     if base_url:
         return {
-            "model_provider": "openai",
+            "model_provider": "anthropic",
             "base_url": base_url,
-            "api_key": os.environ["OPENAI_API_KEY"],
+            "api_key": os.environ["ANTHROPIC_API_KEY"],
         }
 
     return {}

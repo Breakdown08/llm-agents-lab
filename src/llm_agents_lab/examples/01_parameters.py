@@ -2,6 +2,8 @@
 """
 
 from llm_agents_lab.course_model import build_model
+from langchain_anthropic import ChatAnthropic
+from typing import cast
 
 QUESTION = "Опишите очередь задач в трёх предложениях."
 
@@ -17,7 +19,8 @@ def show(title, response):
 
 
 # 1. Параметр при создании модели: действует на все вызовы этой модели.
-short = build_model(temperature=0, max_tokens=32)
+short: ChatAnthropic = cast(ChatAnthropic, build_model(temperature=0, max_tokens=32))
+
 show("MAX_TOKENS=32 ПРИ СОЗДАНИИ", short.invoke(QUESTION))
 
 # 2. Параметр, прикреплённый через bind: получается обёртка вокруг модели
@@ -33,8 +36,8 @@ show("ИСХОДНАЯ МОДЕЛЬ ПОСЛЕ ОБОИХ ПЕРЕОПРЕДЕЛ
 
 # 5. Настройки видно и без запроса к провайдеру: они лежат на объекте модели.
 print("НАСТРОЙКИ НА ОБЪЕКТЕ МОДЕЛИ")
-print(f"  имя модели:  {short.model_name}")
+print(f"  имя модели:  {short.model}")
 print(f"  max_tokens:  {short.max_tokens}")
 print(f"  temperature: {short.temperature}")
-print(f"  timeout:     {short.request_timeout}")
+print(f"  timeout:     {short.default_request_timeout}")
 print(f"  max_retries: {short.max_retries}")

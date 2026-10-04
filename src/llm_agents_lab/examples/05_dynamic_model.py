@@ -33,7 +33,7 @@ def pick_model(
     """Короткий разговор ведёт дешёвая модель, разросшийся, дорогая."""
     message_count = len(request.state["messages"])
     chosen = strong if message_count > 2 else fast
-    print(f"  [middleware] сообщений в состоянии: {message_count}, модель: {chosen.model_name}")
+    print(f"  [middleware] сообщений в состоянии: {message_count}, модель: {chosen.model}")
     return handler(request.override(model=chosen))
 
 
